@@ -20,7 +20,9 @@ export const translate = (rna) => {
 
   let proteins = [];
   for (let i = 0; i < rna.length; i += 3) {
+    console.log("codons", codons)
     const protein = codons[rna.slice(i, i + 3)];
+    console.log("proteins", proteins)
     if (protein === undefined)
       throw new Error('Invalid codon');
     if (protein === 'STOP')
