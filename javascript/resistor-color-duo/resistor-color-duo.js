@@ -4,8 +4,8 @@
 //
 const colorData = [
   "black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"
-]
-export const decodedValue = (colorsArr) => {
-  const answer = colorsArr.slice(0, 2).map(i => colorData.indexOf(i)).join("");
-  return parseInt(answer)
-}
+];
+
+export const decodedValue = ([color1, color2]) => {
+  return colorData.indexOf(color1) * 10 + colorData.indexOf(color2);
+};
